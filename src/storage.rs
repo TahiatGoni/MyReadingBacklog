@@ -15,12 +15,12 @@ pub fn create_tables(conn: &Connection) -> Result<()> {
 }
 
 //Simple initial implementation with simple insertion of item into db
-pub fn add_item(conn: &Connection, article_link: String) -> Result<()> {
+pub fn add_item(conn: &Connection, article_link: &String) -> Result<()> {
     let _ = conn.execute(
         "
             insert into reading_items (article_link) values (?1)
         ",
-        &[&article_link],
+        &[article_link],
     )?;
     Ok(())
 }

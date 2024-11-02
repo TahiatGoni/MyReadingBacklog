@@ -8,6 +8,23 @@ I want to be able to read an article in first in first out method or get a rando
 
 MyReadingBacklog is a work in progress. It is intended to be a terminal application where you can store links to articles you want to read from the web.
 
+### Update 2nd November 2024
+- I have created the basic functionality
+  - Decide to Use sqlite as a store for the articles.
+  - This is a small project and I expect that anyone using it would not have many records.
+  - I chose Rust because people talk about it and I think a small scale project like this is perfect to learn.
+    - There have been some frustrations which I think are expected given my lack of experience with the language.
+    - Shout out to ChatGPT for being super helpful.
+      - What I am doing here is not super complex and there are defined ways to do things like writing to db, reading files etc.
+      - I found it easier to ask chatGPT and this is the first time I have used it to this extent.
+- Articles can be added
+- Articles can returned in FIFO order
+  - Using minimum Id for now to return articles.
+  - A timestamp might be a better choice but minimum Id okay for now.
+- Any returned Article id is saved so users can remove them when they are read.
+- Statistics for articles read not implemented.
+- Nothing implemented for setting up the program to show stats when the terminal is opened
+
 ### Core features
 - Save links to articles into a queue.
 - Get articles from the queue in FIFO order.

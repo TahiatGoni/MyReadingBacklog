@@ -6,7 +6,9 @@ fn print_help() {
     print!(
         "usage:
             --add <link>
-            --get_article
+            --get_queue_article
+            --get_random_article
+            --article_read
         "
     )
 }
@@ -29,12 +31,28 @@ fn main() -> Result<()> {
                 Ok(_res) => println!("ok"),
                 Err(err) => eprintln!("{}", err),
             };
-        } else if args[1] == "--get_article" {
+        } else if args[1] == "--get_queue_article" {
             match storage::get_article_fifo(&conn) {
                 Ok(result) => {
                     println!("{}", result)
                 }
                 Err(err) => eprintln!("{}", err),
+            };
+        } else if args[1] == "--get_random_article" {
+            match storage::get_article_random(&conn) {
+                Ok(result) => {
+                    println!("{}", result)
+                }
+                Err(err) => eprintln!("{}", err),
+            };
+        } else if args[1] == "--article_read" {
+            match storage::remove_last_read_article(&conn) {
+                Ok(_) => {
+                    println!("Article removed from list!")
+                }
+                Err(err) => {
+                    eprintln!("{}", err)
+                }
             };
         } else {
             print_help();

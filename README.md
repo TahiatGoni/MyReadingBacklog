@@ -24,6 +24,7 @@ MyReadingBacklog is a work in progress. It is intended to be a terminal applicat
 - Any returned Article id is saved so users can remove them when they are read.
 - Statistics for articles read not implemented.
 - Nothing implemented for setting up the program to show stats when the terminal is opened
+- Some error Handling is missing with regards to passing arguments
 
 ### Core features
 - Save links to articles into a queue.
@@ -35,3 +36,22 @@ MyReadingBacklog is a work in progress. It is intended to be a terminal applicat
 ### Potential Additional features
 - Add a category read feature to organize my articles and read from certain categories.
 - Might be clumsy to manually add articles through the terminal, so research some UX improvements.
+
+### Usage
+The following arguments are available now
+
+Add an article
+
+```--add <link>```
+
+Get article in FIFO order
+
+```--get_queue_article```
+
+Get a random article
+
+```--get_random_article```
+
+Mark last retrieved article as read. This removes the article from storage
+
+```--article_read```

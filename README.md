@@ -55,3 +55,7 @@ Get a random article
 Mark last retrieved article as read. This removes the article from storage
 
 ```--article_read```
+
+Retrieves the stats for the user
+
+```--stats```

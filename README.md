@@ -26,6 +26,15 @@ MyReadingBacklog is a work in progress. It is intended to be a terminal applicat
 - Nothing implemented for setting up the program to show stats when the terminal is opened
 - Some error Handling is missing with regards to passing arguments
 
+### Update 10th November 2024
+- Some stats are being tracked now.
+  - The number of articles in queue.
+  - The number of articles read.
+  - The time of last added article.
+  - The time of last read article.
+- Next steps is to work on adding some analysis on the stats and printing everything in a nice format.
+- After that, will work on setting up so that stats are shown when terminal is opened
+
 ### Core features
 - Save links to articles into a queue.
 - Get articles from the queue in FIFO order.
